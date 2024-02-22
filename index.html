@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block-Explorer</title>
-</head>
-<body>
-    <header>
-        <h1>Block Explorer</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./app.css" />
+    <script
+      src="app.js" type="module"
+      defer></script>
+    <title>Web3</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1>Block Explorer(MetaMask)</h1>
     </header>
     <main>
-        <button>Log in</button>
+      <div class="container">
+        <section>
+          <div class="form-control">
+            <input
+              type="text"
+              name="accountNumber"
+              id="accountNumber"
+              placeholder="From account" />
+
+            <button
+              id="checkBalance"
+              class="btn btn-primary">
+              Check Account Balance
+            </button>
+            <div>
+              <span>Eth Balance</span>
+            </div>
+            <div
+              id="balance"
+              class="balance"></div>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Incert amount to transfer" />
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="toAccountNumber"
+              id="toAccountNumber"
+              placeholder="To account" />
+          </div>
+          <div class="form-control">
+            <button
+              id="sendTx"
+              class="btn btn-primary">
+              Transfer
+            </button>
+          </div>
+        </section>
+      </div>
+      <section>
+        <h3>Current block mined</h3>
+        <button id="getBlock">Get Block</button>
+        <div id="latestBlock"></div>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
