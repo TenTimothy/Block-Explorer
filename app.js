@@ -10,13 +10,11 @@ const getBlockbtn = document.querySelector('#getBlock');
 let acccounts;
  
 async function checkBalance() {
-  if (typeof ethereum !== undefined) {
+  if (typeof ethereum !== 'undefined') {
     acccounts = await ethereum.request({ method: 'eth_requestAccounts' });
  
-   
     const balance = await ethereum.request({ method: 'eth_getBalance', params: [accountInput.value, 'latest'] });
  
-    
     const parsedBalanced = parseInt(balance) / Math.pow(10, 18);
     displayBalance.innerText = parsedBalanced;
   } else {
