@@ -18,7 +18,7 @@ async function checkBalance() {
     const parsedBalanced = parseInt(balance) / Math.pow(10, 18);
     displayBalance.innerText = parsedBalanced;
   } else {
-    console.log('No ethereum');
+    alert('No wallet found');
   }
 }
  
