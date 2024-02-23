@@ -7,15 +7,17 @@ const ethereumService = {
         throw new Error('No Ethereum wallet found');
       }
     },
-  
+    
     async getBalance(account) {
       if (typeof ethereum !== 'undefined') {
         const balance = await ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] });
-        return parseInt(balance, 10) / Math.pow(10, 18); 
+        return parseInt(balance, 16); // Balansen returneras i Wei
       } else {
         throw new Error('No Ethereum wallet found');
       }
     },
+      
+      
   
     async sendTransaction(from, to, amount) {
       if (typeof ethereum !== 'undefined') {
@@ -26,12 +28,7 @@ const ethereumService = {
           gas: `0x${(21000).toString(16)}`,
           gasPrice: `0x${(2500000).toString(16)}`
         }];
-  
-        const response = await ethereum.request({
-          method: 'eth_sendTransaction',
-          params
-        });
-        return response;
+        return await ethereum.request({ method: 'eth_sendTransaction', params });
       } else {
         throw new Error('No Ethereum wallet found');
       }
@@ -40,11 +37,12 @@ const ethereumService = {
     async getBlockNumber() {
       if (typeof ethereum !== 'undefined') {
         const blockNumber = await ethereum.request({ method: 'eth_blockNumber' });
-        return parseInt(blockNumber, 10); 
+        return parseInt(blockNumber, 16); // Konverterar till decimal
       } else {
         throw new Error('No Ethereum wallet found');
       }
     }
-  };
+};
   
   export default ethereumService;
+  

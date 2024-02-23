@@ -11,25 +11,26 @@ const getBlockbtn = document.querySelector('#getBlock');
 
 let acccounts;
 
-// Uppdaterad checkBalance funktion som använder 'ethereum' direkt
+
 async function checkBalance() {
-    if (typeof ethereum !== 'undefined') {
-        // Begär användarbehörighet för konton. Denna rad kan vara överflödig om du redan har tillåtelse.
-        acccounts = await ethereum.request({method: 'eth_requestAccounts'});
-        
-        // Använd 'ethereum.request' direkt för att hämta saldo med accountInput.value
-        const balance = await ethereum.request({
-            method: 'eth_getBalance', 
-            params: [accountInput.value, 'latest'] // Använder användarens inmatade konto
-        });
-        
-        // Konvertera från Wei till Ether och visa saldot
-        const parsedBalance = parseInt(balance) / Math.pow(10, 18);
-        displayBalance.innerText = parsedBalance; // Visa saldot med 4 decimaler
-    } else {
-        alert('No wallet found');
+    try {
+      const accounts = await ethereumService.requestAccounts();
+      const accountToCheck = accountInput.value.trim() ? accountInput.value : accounts[0];
+      console.log('Checking balance for account:', accountToCheck);
+  
+      const balanceWei = await ethereumService.getBalance(accountToCheck);
+      console.log('Balance in Wei (hex):', balanceWei);
+  
+      const balanceEther = balanceWei / Math.pow(10, 18);
+      console.log('Balance in Ether:', balanceEther);
+  
+      displayBalance.innerText = balanceEther.toFixed(4);
+    } catch (error) {
+      console.error('Error fetching balance:', error);
+      alert(error.message);
     }
 }
+
 
 async function sendFunds() {
     try {
