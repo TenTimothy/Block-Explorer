@@ -7,7 +7,7 @@ const toAccountInput = document.querySelector('#toAccountNumber');
 const valueInput = document.querySelector('#amount');
 const latestBlock = document.querySelector('#latestBlock');
 
-export const ui = {
+export const uiHandler = {
   async checkBalance() {
     try {
       const accounts = await ethereumService.requestAccounts();
