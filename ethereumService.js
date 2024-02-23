@@ -1,30 +1,50 @@
-// ethereumService.js
-export const ethereumService = {
+const ethereumService = {
     async requestAccounts() {
-      if (typeof ethereum === 'undefined') {
-        throw new Error('No Ethereum object found');
+      if (typeof ethereum !== 'undefined') {
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        return accounts;
+      } else {
+        throw new Error('No Ethereum wallet found');
       }
-      return await ethereum.request({ method: 'eth_requestAccounts' });
     },
   
     async getBalance(account) {
-      const balance = await ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] });
-      return parseInt(balance, 10) / Math.pow(10, 18);
+      if (typeof ethereum !== 'undefined') {
+        const balance = await ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] });
+        return parseInt(balance, 10) / Math.pow(10, 18); 
+      } else {
+        throw new Error('No Ethereum wallet found');
+      }
     },
   
     async sendTransaction(from, to, amount) {
-      const params = [{
-        from,
-        to,
-        value: `0x${(amount * Math.pow(10, 18)).toString(16)}`,
-        gas: `0x${(21000).toString(16)}`,
-        gasPrice: `0x${(2500000).toString(16)}`,
-      }];
-      return await ethereum.request({ method: 'eth_sendTransaction', params });
+      if (typeof ethereum !== 'undefined') {
+        const params = [{
+          from,
+          to,
+          value: `0x${(parseFloat(amount) * Math.pow(10, 18)).toString(16)}`,
+          gas: `0x${(21000).toString(16)}`,
+          gasPrice: `0x${(2500000).toString(16)}`
+        }];
+  
+        const response = await ethereum.request({
+          method: 'eth_sendTransaction',
+          params
+        });
+        return response;
+      } else {
+        throw new Error('No Ethereum wallet found');
+      }
     },
   
     async getBlockNumber() {
-      return await ethereum.request({ method: 'eth_blockNumber' });
+      if (typeof ethereum !== 'undefined') {
+        const blockNumber = await ethereum.request({ method: 'eth_blockNumber' });
+        return parseInt(blockNumber, 10); 
+      } else {
+        throw new Error('No Ethereum wallet found');
+      }
     }
   };
   
+  export default ethereumService;

@@ -1,4 +1,4 @@
 
-import { uiHandler } from './uiHandler.js';
+import uiHandler from "./uiHandler.js"; 
+document.addEventListener('DOMContentLoaded', uiHandler.bindEventListeners);
 
-document.addEventListener('DOMContentLoaded', ui.addEventListeners);
