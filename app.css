@@ -14,8 +14,8 @@ body {
 
 h2 {
     background: linear-gradient(to right, #ff009d, #ffffff);
-    -webkit-background-clip: text; /* För Safari */
-    -webkit-text-fill-color: transparent; /* Göm texten så att bakgrundsbilden syns genom den */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
@@ -33,27 +33,27 @@ h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(10, 21, 33, 0.9); /* Anpassad för att passa bilden */
-  border: 1px solid #29abe2; /* Anpassad neon-blå färg */
+  background-color: rgba(10, 21, 33, 0.9); 
+  border: 1px solid #29abe2; 
   padding: 2rem;
   margin: 2rem 0;
-  box-shadow: 0 4px 6px rgba(41, 171, 226, 0.75); /* Anpassad neon-blå skugga */
+  box-shadow: 0 4px 6px rgba(41, 171, 226, 0.75);
   border-radius: 30px;
   margin-top: 10%;
 }
 
 .box h3 {
-  color: #29abe2; /* Anpassad neon-blå färg */
+  color: #29abe2; 
   margin: 1rem 0;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 20px;
   border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); /* Anpassad neon-blå skugga */
+  box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); 
 }
 
 input {
   padding: 0.5rem 0.4rem;
-  border: solid 1px #29abe2; /* Anpassad neon-blå färg */
+  border: solid 1px #29abe2; 
   outline: none;
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
@@ -65,14 +65,14 @@ input {
   align-items: center;
   height: 75px;
   width: 100%;
-  background: rgba(10, 21, 33, 0.95); /* Lägre transparens för en djupare färg */
+  background: rgba(10, 21, 33, 0.95); 
   margin-bottom: 1rem;
   padding: 0 1rem;
   box-shadow: 0 4px 6px rgba(41, 171, 226, 0.75);
 }
 
 .top-bar h1 {
-  color: #29abe2; /* Anpassad neon-blå färg */
+  color: #29abe2; 
   margin: 0;
 }
 
@@ -98,77 +98,77 @@ input {
 
 .btn {
   border: 0;
-  background: #0d345d; /* Mörk bakgrund för knappar */
-  color: #29abe2; /* Anpassad neon-blå text */
+  background: #0d345d; 
+  color: #29abe2;
   min-width: 150px;
   font-size: 1rem;
   line-height: 1.1;
   padding: 0.5rem 0.5rem;
   cursor: pointer;
-  box-shadow: 0 2px 3px rgba(41, 171, 226, 0.75); /* Anpassad neon-blå skugga */
+  box-shadow: 0 2px 3px rgba(41, 171, 226, 0.75); 
   transition: transform 0.1s ease-in-out;
   margin-top: 10px;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  background: #113366; /* Ljusare bakgrund för hover-effekt */
-  box-shadow: 0 6px 8px rgba(41, 171, 226, 1); /* Starkare skugga för hover-effekt */
+  background: #113366; 
+  box-shadow: 0 6px 8px rgba(41, 171, 226, 1); 
 }
 
 .btn-primary {
-    background: linear-gradient(to right, #0d345d, #187da8); /* Gradient från mörk till neon-blå */
-    color: #ffffff; /* Vit text för bättre kontrast */
+    background: linear-gradient(to right, #0d345d, #187da8); 
+    color: #ffffff; 
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 5px; /* Lätt rundade hörn */
-    box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); /* Anpassad neon-blå skugga för djup */
+    border-radius: 5px; 
+    box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); 
     transition: all 0.3s ease;
 }
   
 .btn-primary:hover {
-    background: linear-gradient(to right, #29abe2, #0d345d); /* Ljusare gradient för hover-effekt */
-    box-shadow: 0px 6px 8px rgba(41, 171, 226, 1); /* Starkare skugga för hover-effekt */
+    background: linear-gradient(to right, #29abe2, #0d345d); 
+    box-shadow: 0px 6px 8px rgba(41, 171, 226, 1); 
 }
   
 .box h3 {
-    color: #29abe2; /* Anpassad neon-blå textfärg */
-    background-color: rgba(17, 36, 56, 0.9); /* Mörk bakgrund för kontrast */
-    box-shadow: 0 1px 2px rgba(41, 171, 226, 0.4); /* Anpassad neon-blå skugga för djup */
-    padding: 6px 10px; /* Lite utrymme inuti för att göra texten mer läsbar */
-    border-radius: 5px; /* Lätt rundade hörn */
-    box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); /* Anpassad neon-blå skugga för djup */
-    margin: 40px 0; /* Ge lite utrymme ovan och nedan */
-    display: inline-block; /* Gör så att bakgrund och padding endast påverkar textens storlek */
+    color: #29abe2; 
+    background-color: rgba(17, 36, 56, 0.9);
+    box-shadow: 0 1px 2px rgba(41, 171, 226, 0.4); 
+    padding: 6px 10px;
+    border-radius: 5px; 
+    box-shadow: 0px 4px 6px rgba(41, 171, 226, 0.75); 
+    margin: 40px 0; 
+    display: inline-block; 
     font-size: small;
     font-weight: 600; 
 }
   
 #latestBlock {
-    background-color: rgba(17, 36, 56, 0.75); /* Ljusare och mer genomskinlig bakgrund */
-    color: #29abe2; /* Anpassad neon-blå textfärg för läsbarhet och designkonsistens */
-    padding: 10px; /* Utrymme inuti för att inte texten ska vara för nära kanterna */
-    margin-top: 0px; /* Lite utrymme ovanför för separation från knappen */
-    border-radius: 8px; /* Rundade hörn för att matcha den övergripande designstilen */
-    box-shadow: 0 4px 8px rgba(41, 171, 226, 0.6); /* Starkare neon-blå skugga för att ge djup */
-    font-size: 1rem; /* Ange lämplig textstorlek */
-    text-align: center; /* Centrera texten för konsistens */
-    max-width: 100%; /* Säkerställ att det inte sträcker sig utanför sin container */
-    word-wrap: break-word; /* Bryt långa ord för att förhindra layoutproblem */
-    display: block; /* Se till att det tar upp hela bredden det kan */
-    overflow: hidden; /* Förhindra att innehållet spiller ut */
+    background-color: rgba(17, 36, 56, 0.75); 
+    color: #29abe2;
+    padding: 10px; 
+    margin-top: 0px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(41, 171, 226, 0.6); 
+    font-size: 1rem; 
+    text-align: center; 
+    max-width: 100%; 
+    word-wrap: break-word; 
+    display: block; 
+    overflow: hidden; 
 }
 
 .footer {
     width: 100%;
     padding: 1rem 0;
-    background-color: rgba(17, 36, 56, 0.95); /* Mörk bakgrund för att passa designen */
+    background-color: rgba(17, 36, 56, 0.95); 
     color: #29abe2;
     text-align: center;
-    position: absolute; /* Positionera längst ner på sidan */
-    bottom: 0; /* Noll marginal från botten */
-    left: 0; /* Linjera till vänstra kanten */
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
 }
   
 footer {
@@ -176,37 +176,37 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Lägg till för att säkerställa att footern alltid är längst ner */
+
 html, body {
     height: 100%;
-    position: relative; /* Nödvändig för att position: absolute; i .footer ska fungera korrekt */
-    margin: 0; /* Ta bort standardmarginalen */
+    position: relative; 
+    margin: 0; 
 }
 
-/* Lägg till ytterligare styling för att säkerställa att innehållet inte överlappar footern */
+
     .main-content {
-    padding-bottom: 60px; /* Utrymme motsvarande footerns höjd */
+    padding-bottom: 60px; 
 }
     
-  /* Stil för etiketten "Eth Balance" */
+ 
   .ethBalance {
-    color: #29abe2; /* Anpassad neon-blå textfärg */
-    background-color: rgba(17, 36, 56, 0.9); /* Mörk bakgrund för kontrast */
-    padding: 10px; /* Utrymme inuti för att inte texten ska vara för nära kanterna */
-    margin: 25px 0; /* Ökat utrymme ovanför och nedanför */
-    border-radius: 5px; /* Lätt rundade hörn */
-    box-shadow: 0 4px 6px rgba(41, 171, 226, 0.4); /* Anpassad neon-blå skugga för djup */
-    text-align: center; /* Centrera texten */
-    display: flex; /* Använder flexbox */
-    justify-content: space-between; /* Placera innehållet jämnt fördelat längs huvudaxeln */
-    align-items: center; /* Centrerar innehållet vertikalt */
-    width: auto; /* Justera bredden efter innehållet */
+    color: #29abe2; 
+    background-color: rgba(17, 36, 56, 0.9); 
+    padding: 10px; 
+    margin: 25px 0; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(41, 171, 226, 0.4); 
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: auto; 
 }
 
-/* Stil för själva balansvärdet */
+
 #balance {
-    color: #29abe2; /* Anpassad neon-blå textfärg */
-    font-weight: bold; /* Fet stil för att balansvärdet ska stå ut */
+    color: #29abe2; 
+    font-weight: bold; 
     margin-left: 6px;
 }
 
