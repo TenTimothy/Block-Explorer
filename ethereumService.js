@@ -17,8 +17,6 @@ const ethereumService = {
       }
     },
       
-      
-  
     async sendTransaction(from, to, amount) {
       if (typeof ethereum !== 'undefined') {
         const params = [{
