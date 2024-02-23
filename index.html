@@ -15,30 +15,30 @@
   </head>
   <body>
     <header class="top-bar">
-      <h1>Block Explorer(MetaMask)</h1>
+      <h1>Block Explorer</h1>
     </header>
     <main>
       <div class="container">
-        <section>
+        <h2>Ethereum</h2>
+        <section class="box">   
           <div class="form-control">
             <input
               type="text"
               name="accountNumber"
               id="accountNumber"
               placeholder="From account" />
-
             <button
               id="checkBalance"
               class="btn btn-primary">
               Check Account Balance
             </button>
-            <div>
-              <span>Eth Balance</span>
-            </div>
-            <div
-              id="balance"
-              class="balance"></div>
-          </div>
+            <div class="ethBalance">
+              <span>Eth Balance: </span>
+              <div
+                id="balance"
+                class="balance"></div>
+              </div>
+            </div>  
           <div class="form-control">
             <input
               type="text"
@@ -60,13 +60,16 @@
               Transfer
             </button>
           </div>
+          <section>
+            <h3>Current block mined</h3>
+            <button id="getBlock" class="btn btn-primary">Get Block</button>
+            <div id="latestBlock"></div>
+          </section>
         </section>
       </div>
-      <section>
-        <h3>Current block mined</h3>
-        <button id="getBlock">Get Block</button>
-        <div id="latestBlock"></div>
-      </section>
     </main>
+    <div class="footer">
+        <footer>&copy; Block Explorer 2024</footer>
+    </div>  
   </body>
 </html>
