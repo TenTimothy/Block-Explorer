@@ -16,17 +16,12 @@ async function checkBalance() {
     try {
       const accounts = await ethereumService.requestAccounts();
       const accountToCheck = accountInput.value.trim() ? accountInput.value : accounts[0];
-      console.log('Checking balance for account:', accountToCheck);
-  
       const balanceWei = await ethereumService.getBalance(accountToCheck);
-      console.log('Balance in Wei (hex):', balanceWei);
-  
       const balanceEther = balanceWei / Math.pow(10, 18);
-      console.log('Balance in Ether:', balanceEther);
-  
+
       displayBalance.innerText = balanceEther.toFixed(4);
     } catch (error) {
-      console.error('Error fetching balance:', error);
+      
       alert(error.message);
     }
 }
